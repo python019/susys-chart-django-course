@@ -7,7 +7,7 @@ class Post(models.Model):
         verbose_name_plural = "Postlar"
 
     nomi = models.CharField(max_length=50)
-    mazmuni = models.TextField()
+    daromadi = models.IntegerField()
 
     def __str__(self):
         return self.nomi
