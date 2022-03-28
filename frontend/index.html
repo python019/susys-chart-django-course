@@ -26,10 +26,10 @@
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: [{% for post in posts %} '{{ post.nomi }}', {% endfor %}],
                 datasets: [{
                     label: '# To"plangan ovozlar',
-                    data: [112, 19, 3, 5, 2, 3],
+                    data: [{% for post in posts %} {{ post.daromadi }}, {% endfor %}],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
